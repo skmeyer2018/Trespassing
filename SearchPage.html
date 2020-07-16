@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function newRecord() 
+            {
+                document.getElementById("newRecordPopup").style.visibility="visible";
+                document.getElementById("btnClosePopup").style.visibility="visible";
+            }
+       function closePopup() 
+            {
+                document.getElementById("newRecordPopup").style.visibility="hidden";
+                document.getElementById("btnClosePopup").style.visibility="hidden";
+            }     
+        </script>
+
+    </head>
+    <body>
+        <img src="images/PhoenixPolice.png" width="75" height="75" style="margin-top:10px; margin-left:50px;"><br />
+        <center> 
+        <div style="margin-top:5px">
+            <img src="images/vectorstock_22925130.png" width="50" height="110"><br />
+            <input type="search" placeholder="SEARCH" style="height:40px; width:400px; margin-top:30px;">
+            <button onclick="newRecord()" type="submit" style="height:40px;"><i class="fa fa-search"></i></button>
+            <p style="color:red; font-size:30px; margin-top:20px; font-weight:bold">CREATE RECORD</p>
+            <button  onclick="closePopup()" id="btnClosePopup" class="btn btn-primary" style="margin-top: 20px; height:40px; width:130px; font-size:30px; background-color:red; color:white; visibility: hidden;">CLOSE</button>
+        </div>
+        <iframe  id="newRecordPopup" src="NewRecordPopup.html" style="border-style:outset; height:600px; width:1100px; visibility: hidden;" ></iframe>
+        </center>
+    </body>
+
+</html>
